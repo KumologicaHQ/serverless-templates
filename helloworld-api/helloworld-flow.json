@@ -1,1 +1,63 @@
-[{"id":"main.flow","type":"tab","label":"main","disabled":false,"info":""},{"id":"test.flow","type":"tab","label":"test","disabled":false,"info":""},{"id":"eacbb9ef.69d5c8","type":"EventListener","z":"main.flow","name":"","eventSource":"api","dynamodbOperation":"","apiMethod":"get","apiUrl":"/hello","albMethod":"any","albUrl":"","bucketName":"","event":"s3:ObjectCreated:*","x":120,"y":160,"wires":[["5eb3cd61.894f04"]],"caname":"aws-event-handler","category":"aws"},{"id":"5eb3cd61.894f04","type":"Logger","z":"main.flow","Level":"INFO","Message":"Test Log","name":"Log","x":310,"y":160,"wires":[["b5fc6ccd.17dd7"]],"caname":"logger","category":"logging"},{"id":"b5fc6ccd.17dd7","type":"EventListener-End","z":"main.flow","name":"Success","statusCode":"200","headers":{"content-type":"application/json"},"Payloader":"{'output': 'Hello World'}","PayloaderType":"str","x":520,"y":160,"wires":[],"caname":"eventlistenerend","category":"aws"}]
+[
+  {
+    "id": "main.flow",
+    "type": "tab",
+    "label": "main",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "test.flow",
+    "type": "tab",
+    "label": "test",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "eacbb9ef.69d5c8",
+    "type": "EventListener",
+    "z": "main.flow",
+    "name": "",
+    "eventSource": "api",
+    "dynamodbOperation": "",
+    "apiMethod": "get",
+    "apiUrl": "/hello",
+    "albMethod": "any",
+    "albUrl": "",
+    "bucketName": "",
+    "event": "s3:ObjectCreated:*",
+    "x": 120,
+    "y": 160,
+    "wires": [["5eb3cd61.894f04"]],
+    "caname": "aws-event-handler",
+    "category": "aws"
+  },
+  {
+    "id": "5eb3cd61.894f04",
+    "type": "Logger",
+    "z": "main.flow",
+    "Level": "INFO",
+    "Message": "Test Log",
+    "name": "Log",
+    "x": 310,
+    "y": 160,
+    "wires": [["b5fc6ccd.17dd7"]],
+    "caname": "logger",
+    "category": "logging"
+  },
+  {
+    "id": "b5fc6ccd.17dd7",
+    "type": "EventListener-End",
+    "z": "main.flow",
+    "name": "Success",
+    "statusCode": "200",
+    "headers": { "content-type": "application/json" },
+    "Payloader": "{\"output\": \"Hello World\"}",
+    "PayloaderType": "str",
+    "x": 520,
+    "y": 160,
+    "wires": [],
+    "caname": "eventlistenerend",
+    "category": "aws"
+  }
+]
