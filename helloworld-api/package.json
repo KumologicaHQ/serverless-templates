@@ -1,0 +1,19 @@
+{
+  "name": "helloworld-api",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "helloworld-flow.json",
+    "node_modules/**/*"
+  ],
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@kumologica/runtime": "latest"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.513.0"
+  }
+}

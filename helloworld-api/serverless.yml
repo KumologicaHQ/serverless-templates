@@ -1,0 +1,15 @@
+service: helloworld-api
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  helloworld-flow:
+    events:
+      - http:
+          path: hello
+          method: get
+
+plugins:
+  - kumologica-serverless
