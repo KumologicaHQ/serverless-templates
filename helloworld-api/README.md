@@ -35,7 +35,7 @@ Run the following command in your terminal
 serverless plugin install --name kumologica-serverless
 ```
 
-## Create new service from a Template
+## Create new kumologica service from a Template
 
 Use the Serverless Framework open-source CLI to create a new Service:
 
@@ -46,15 +46,20 @@ sls create --template-url https://github.com/KumologicaHQ/serverless-templates/t
 <div class="alert alert-info"> 
 Kumologica projects can be deployed on different serverless platforms. As a consequence, it is not required to provide a lambda file or specify the `handler` key within your `serverless.yml` file. The plugin `kumologica-serverless` will take care of those details for you.
 
-If you are interested, you can always unzip the artefact file within the `.serverless` directory to see the effect of the plugin.
+After lambda file is created by plugin, the npm install is called and all node modules specified in package.json are installed. All modules are deleted at the end of deploy process.
+
+If you are interested, you can always unzip the artefact file within the `.serverless` directory to see the effect of the plugin or see the final version of cloud formation scripts generated.
 
 </div>
 
-## Edit your Flow (Optional)
+## Edit your Flow
 
-Install [Kumologica Designer](https://kumologica.com/download.html) if you want to open and modify your flow.
+Install [Kumologica Designer](https://kumologica.com/download.html) to open and modify your flow.
+The default flow handles api call GET /dev/hello and returns hello world. Kumologica designer allows
+implementation of any integration flow providing rich set of outbound nodes and additional repository of 
+contribution flows.
 
-Kumologica Designer is available for free on Windows or Mac
+Kumologica Designer is available for free on Windows or Mac.
 
 ## Deploy your flow
 
@@ -69,7 +74,7 @@ sls deploy -v
 Replace the URL in the following curl command with your returned endpoint URL, which you can find in the sls deploy output, to hit your URL endpoint.
 
 ```
-$ curl -X POST https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/dev/hello
+$ curl -X POST https://xxxxxxxxxx.execute-api.{your_region}.amazonaws.com/dev/hello
 ```
 
 ## Remove your Service

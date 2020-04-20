@@ -1,7 +1,7 @@
 {
   "name": "helloworld-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "kumologica flow",
   "files": [
     "helloworld-flow.json",
     "node_modules/**/*"

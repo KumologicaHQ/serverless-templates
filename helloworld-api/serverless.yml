@@ -9,10 +9,22 @@ provider:
 
 functions:
   helloworld-flow:
+    # add all events required by inboud nodes in the flow.
     events:
       - http:
           path: hello
           method: get
+
+# inferIamPolicies - if true kumologica-serverless-plugin will add all policies required 
+#                    by outbound nodes in the flow
+#                    if false or not present then lambda iam polices remain as they are.
+# exclideTest      - if true then test tab with its test nodes 
+#                    will be removed before flow is deployed
+#                    if false or not present then flow is deployed as iss
+#custom:
+#  kumologica:
+#    inferIamPolicies: true  # false by default
+#    excludeTest: true       # false by default
 
 plugins:
   - kumologica-serverless-plugin
