@@ -15,15 +15,15 @@ functions:
           path: hello
           method: get
 
-# inferIamPolicies - if true kumologica-serverless-plugin will add all policies required 
-#                    by outbound nodes in the flow
-#                    if false or not present then lambda iam polices remain as they are.
+# inferIamPolicies - if true or not present kumologica-serverless-plugin will 
+#                    add all policies required by outbound nodes in the flow
+#                    if false then lambda iam polices remain as they are.
 # exclideTest      - if true then test tab with its test nodes 
 #                    will be removed before flow is deployed
 #                    if false or not present then flow is deployed as iss
 #custom:
 #  kumologica:
-#    inferIamPolicies: true  # false by default
+#    inferIamPolicies: true  # true by default
 #    excludeTest: true       # false by default
 
 plugins:
